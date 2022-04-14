@@ -1,7 +1,5 @@
 package com.springboot.springbootmyapp;
 
-import java.util.Comparator;
-
 public class Supervisor {
 	
 	private int id;
@@ -10,7 +8,14 @@ public class Supervisor {
 	private String identificationNumber;
 	private String firstName;
 	private String lastName;
+	private String supervisor;
 	
+	public String getSupervisor() {
+		return supervisor;
+	}
+	public void setSupervisor(String supervisor) {
+		this.supervisor = supervisor;
+	}
 	public int getId() {
 		return id;
 	}
@@ -35,6 +40,7 @@ public class Supervisor {
 	public void setIdentificationNumber(String identificationNumber) {
 		this.identificationNumber = identificationNumber;
 	}
+	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -47,5 +53,7 @@ public class Supervisor {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+	
+	
 
 }

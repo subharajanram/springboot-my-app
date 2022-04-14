@@ -3,7 +3,6 @@ package com.springboot.springbootmyapp;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.springframework.http.ResponseEntity;
@@ -23,7 +22,7 @@ public class WelcomeController {
 		RestTemplate restTemplate = new RestTemplate();
 
 		ResponseEntity<Supervisor[]> response = restTemplate.getForEntity(
-				"https://o3m5qixdng.execute-api.us-east-1.amazonaws.com/api/managers", Supervisor[].class);
+				uri, Supervisor[].class);
 
 		Supervisor[] supervisorList = response.getBody();
 		List<Supervisor> finalList = new ArrayList<Supervisor>();
@@ -78,15 +77,17 @@ public class WelcomeController {
 
 	@PostMapping("api/submit")
 	public String printSupervisor(@RequestBody Supervisor newUser) {
-
-		// Check required parameters
-		if (newUser.getFirstName().isBlank() || newUser.getLastName().isBlank()) {
-			//Or we can write a custom ErrorController for specific errors.
-			return "Error First and Last Names are required values";
-		} else
-			return newUser.getFirstName() + " " + newUser.getLastName() +  " " + newUser.getPhone();
 		
+		String retString = null;		
+		
+		if (newUser.getFirstName().isEmpty() || newUser.getLastName().isEmpty() || newUser.getLastName().isEmpty() || newUser.getSupervisor().isEmpty())
+			retString ="Error First, Last Names and Supervisor are required values";
+		else
+			retString = newUser.getFirstName() + " " + newUser.getLastName() + " " + newUser.getSupervisor() + " " + newUser.getPhone();
+		
+		return retString;
 	}
+	
 }
 
 	
