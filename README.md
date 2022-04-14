@@ -2,8 +2,8 @@
 Light Feather Project
     
 1. Clone code into your local machine from this repo.
-2. Optional Step: If you want to rebuild the jar file in Eclipse (ID of choice) select the project root directory and right click to select: 
-    Run As » Maven build… » Goals: clean package » Run. A new jar is created under target directory. Need to copy this to the root directory.
+2. (Developer notep: If you want to rebuild the jar file in Eclipse (ID of choice) select the project root directory and right click to select: 
+    Run As » Maven build… » Goals: clean package » Run. A new jar is created under target directory. Need to copy this to the root directory.)
 		
 3. docker build --tag=springboot-my-app:latest .
 		
