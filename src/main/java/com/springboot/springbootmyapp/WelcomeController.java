@@ -83,7 +83,7 @@ public class WelcomeController {
 		if (newUser.getFirstName().isBlank() || newUser.getLastName().isBlank()) {
 			return "Error First and Last Names are required values";
 		} else
-			return newUser.getFirstName() + " " + newUser.getLastName();
+			return newUser.getFirstName() + " " + newUser.getLastName() +  " " + newUser.getPhone();
 		//Or we can write a custom ErrorController for specific errors.
 	}
 }

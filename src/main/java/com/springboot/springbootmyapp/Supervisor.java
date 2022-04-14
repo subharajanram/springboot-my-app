@@ -47,24 +47,5 @@ public class Supervisor {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-//	public static Comparator<Supervisor> SupervisorJurisdictionComparator = new Comparator<Supervisor>() {
-//        
-//	      public int compare(Supervisor s1, Supervisor s2)
-//	              {
-//	  
-//	                  String jurisdiction1
-//	                      = s1.getJurisdiction().toUpperCase();
-//	                  String jurisdiction2
-//	                      = s2.getJurisdiction().toUpperCase();
-//	  
-//	                  // ascending order
-//	                  return jurisdiction1.compareTo(
-//	                		  jurisdiction2);
-//	  
-//	                  // descending order
-//	                  // return
-//	                  // StudentName2.compareTo(StudentName1);
-//	              }
-//	          };
 
 }
